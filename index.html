@@ -8,14 +8,36 @@
     body {
       margin: 0;
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      background-image: url('cover.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
       color: white;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      text-align: center;
+      padding: 0 20px;
     }
     h1 {
       font-size: 3.5em;
@@ -51,12 +73,13 @@
   </style>
 </head>
 <body>
-  <img src="cover.jpg" alt="Обложка сайта"
-    style="width: 100%; height: auto; object-fit: cover; max-height: 400px; margin-bottom: 20px:">
+  <div class="content">
   <h1>The Most</h1>
   <h2>Luxury Travel Advisors</h2>
   <p>Трэвел Консьерж — сайт в разработке</p>
   <a class="button" href="https://wa.me/79654105105" target="_blank">Написать в WhatsApp</a>
+  </div>
 </body>
 
 </html>
+
