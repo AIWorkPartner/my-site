@@ -70,7 +70,9 @@
       background-color: #20b358;
     }
     .dev-label {
-      align-self: flex-end; /* Выровнять по правому краю */
+      position: fixed;
+      right: 15px;
+      bottom: 10px;
       font-size: 0.8em;
       opacity: 0.7;
       background: rgba(0, 0, 0, 0.25);
@@ -80,7 +82,7 @@
       text-shadow: 0 1px 3px #222;
       user-select: none;
       pointer-events: none;
-      margin-top: 20vh; /* Подвинуть вниз в пределах content */
+      z-index: 10;
     }
     /* Для адаптивности */
     @media (max-width: 480px) {
@@ -102,11 +104,11 @@
 </head>
 <body>
   <div class="content">
-    <div class="after-title">
   <h2>Luxury Travel Advisors</h2>
   <a class="button" href="https://wa.me/79654105105" target="_blank">Написать в WhatsApp</a>
-      <div class="dev-label">Cайт в разработке</div>
   </div>
+  <div class="dev-label">Cайт в разработке</div>
 </body>
 </html>
+
 
